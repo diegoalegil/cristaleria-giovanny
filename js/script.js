@@ -6,6 +6,20 @@
 (function () {
   'use strict';
 
+  // ---------- Preloader ----------
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    const hide = () => {
+      preloader.classList.add('is-done');
+      setTimeout(() => preloader.remove(), 600);
+    };
+    const minTime = new Promise(r => setTimeout(r, 900));
+    const loadFn  = new Promise(r => window.addEventListener('load', r, { once: true }));
+    Promise.all([minTime, loadFn]).then(hide);
+
+    setTimeout(hide, 4000);
+  }
+
   // ---------- Menú móvil ----------
   const nav     = document.querySelector('.nav');
   const toggle  = nav?.querySelector('.nav__toggle');
