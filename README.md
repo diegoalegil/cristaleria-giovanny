@@ -2,7 +2,7 @@
 
 Sitio web institucional para **Cristalería Giovanny**, taller de fabricación e instalación de vidrio y aluminio con más de 25 años de oficio en Miranda y Caracas, Venezuela.
 
-🔗 **Demo en vivo:** _(pendiente — se actualiza cuando active GitHub Pages)_
+🔗 **Demo en vivo:** [diegoalegil.github.io/cristaleria-giovanny](https://diegoalegil.github.io/cristaleria-giovanny/)
 
 ## Stack
 
