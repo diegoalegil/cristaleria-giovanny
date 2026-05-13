@@ -145,8 +145,13 @@
 
     track.addEventListener('pointerenter', stop);
     track.addEventListener('pointerleave', start);
-    track.addEventListener('touchstart', stop, { passive: true });
-    track.addEventListener('focusin', stop);
+    track.addEventListener('focusin',  stop);
+    track.addEventListener('focusout', start);
+
+    // MOBILE: pausar al tocar, reanudar al soltar
+    track.addEventListener('touchstart',  stop,  { passive: true });
+    track.addEventListener('touchend',    start, { passive: true });
+    track.addEventListener('touchcancel', start, { passive: true });
 
     // Pausar cuando la sección no está visible para ahorrar recursos
     if ('IntersectionObserver' in window) {
