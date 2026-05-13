@@ -184,6 +184,10 @@
 
   if (floatWA && heroEl && 'IntersectionObserver' in window) {
     const obs = new IntersectionObserver(([entry]) => {
+      // Ignorar la primera invocación previa al layout (rect 0×0).
+      // Si no, el observer dispara isIntersecting=false y el botón
+      // aparece sobre el hero durante el primer paint.
+      if (entry.boundingClientRect.height === 0) return;
       floatWA.dataset.hidden = entry.isIntersecting ? 'true' : 'false';
     }, { threshold: 0.15 });
     obs.observe(heroEl);
