@@ -248,13 +248,13 @@ p { margin: 0 0 1em; }
 }
 
 .site-header__inner {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: .5rem;
   min-height: var(--header-h);
   padding-block: .5rem;
 }
+.brand { margin-right: auto; }
 
 .brand {
   display: inline-flex;
@@ -293,7 +293,6 @@ p { margin: 0 0 1em; }
 }
 
 /* Navegación */
-.nav { justify-self: end; grid-column: 3; }
 .nav__menu {
   display: none;
   gap: 1.75rem;
@@ -367,14 +366,16 @@ p { margin: 0 0 1em; }
 }
 
 @media (min-width: 900px) {
+  .site-header__inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+  }
+  .brand { margin-right: 0; }
   .nav { grid-column: 2; justify-self: center; }
   .nav__menu { display: flex; }
   .nav__toggle { display: none; }
-}
-
-/* La compañía del header — el botón de WhatsApp queda a la derecha en columna 3 desktop */
-@media (min-width: 900px) {
-  .site-header__inner > .btn { grid-column: 3; }
+  .site-header__inner > .btn { grid-column: 3; justify-self: end; }
 }
 
 /* ---------- 7. Hero ---------- */
@@ -512,16 +513,20 @@ p { margin: 0 0 1em; }
   backdrop-filter: blur(8px);
 }
 
-@media (min-width: 900px) {
-  .hero { padding-block: 4rem 5rem; }
+@media (min-width: 720px) {
+  .hero { padding-block: 3.5rem 4.5rem; }
   .hero__inner {
     grid-template-columns: 1.05fr 1fr;
-    gap: 3.5rem;
+    gap: 2.5rem;
     align-items: center;
   }
   .hero__content { order: 1; }
   .hero__media   { order: 2; }
   .hero__picture { aspect-ratio: 4 / 5; }
+}
+@media (min-width: 1000px) {
+  .hero { padding-block: 4rem 5rem; }
+  .hero__inner { gap: 3.5rem; }
 }
 
 /* ---------- 8. Tipografía de secciones ---------- */
@@ -821,15 +826,25 @@ section[id] {
 }
 
 /* Hotspot invisible posicionado sobre el botón "Solicita tu presupuesto" del banner.
-   Coordenadas en %% para que escale con la imagen en cualquier viewport. */
+   Coordenadas en %% para que escale con la imagen en cualquier viewport.
+   En mobile, expandimos el tap target para alcanzar el mínimo recomendado de 44px. */
 .promo-banner__hotspot {
   position: absolute;
   left: 15%;
   top: 80%;
   width: 27%;
   height: 11%;
+  min-height: 44px;
   border-radius: 8px;
   transition: background var(--t), box-shadow var(--t);
+}
+@media (max-width: 599px) {
+  .promo-banner__hotspot {
+    left: 8%;
+    top: 65%;
+    width: 45%;
+    height: 30%;
+  }
 }
 .promo-banner__hotspot:hover {
   background: rgba(168, 123, 74, .18);
