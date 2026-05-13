@@ -999,8 +999,8 @@ section[id] {
     90deg,
     var(--color-accent) 0,
     var(--color-accent) var(--filled),
-    #d8d2c5 var(--filled),
-    #d8d2c5 100%
+    #a89e87 var(--filled),
+    #a89e87 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
