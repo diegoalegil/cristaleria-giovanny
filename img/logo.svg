@@ -1,0 +1,10 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cristalería Giovanny">
+  <!-- Panel superior izquierdo -->
+  <rect x="25" y="30" width="22" height="22" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="miter"/>
+  <!-- Panel inferior izquierdo -->
+  <rect x="25" y="52" width="22" height="22" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="miter"/>
+  <!-- Panel inferior derecho -->
+  <rect x="47" y="52" width="22" height="22" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="miter"/>
+  <!-- Panel superior derecho elevado (ventana proyectante en bronce) -->
+  <rect x="53" y="16" width="22" height="22" fill="#a87b4a" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="miter"/>
+</svg>
