@@ -534,11 +534,47 @@
           <h2>Métodos de pago aceptados</h2>
         </header>
         <ul class="payments__list">
-          <li class="payment-badge"><span class="payment-badge__icon">Bs</span><span class="payment-badge__label">Bolívares</span></li>
-          <li class="payment-badge"><span class="payment-badge__icon">$</span><span class="payment-badge__label">USD efectivo</span></li>
-          <li class="payment-badge"><span class="payment-badge__icon">Z</span><span class="payment-badge__label">Zelle</span></li>
-          <li class="payment-badge"><span class="payment-badge__icon">PM</span><span class="payment-badge__label">Pago Móvil</span></li>
-          <li class="payment-badge"><span class="payment-badge__icon">T</span><span class="payment-badge__label">Transferencia</span></li>
+          <li class="payment-badge">
+            <span class="payment-badge__icon payment-badge__icon--text">Bs</span>
+            <span class="payment-badge__label">Bolívares</span>
+          </li>
+
+          <li class="payment-badge">
+            <span class="payment-badge__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </span>
+            <span class="payment-badge__label">USD efectivo</span>
+          </li>
+
+          <li class="payment-badge">
+            <span class="payment-badge__icon payment-badge__icon--brand payment-badge__icon--zelle">Z</span>
+            <span class="payment-badge__label">Zelle</span>
+          </li>
+
+          <li class="payment-badge">
+            <span class="payment-badge__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+            </span>
+            <span class="payment-badge__label">Pago Móvil</span>
+          </li>
+
+          <li class="payment-badge">
+            <span class="payment-badge__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="17 1 21 5 17 9"/>
+                <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                <polyline points="7 23 3 19 7 15"/>
+                <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+              </svg>
+            </span>
+            <span class="payment-badge__label">Transferencia</span>
+          </li>
         </ul>
       </div>
     </section>
