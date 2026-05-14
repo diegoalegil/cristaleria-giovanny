@@ -1305,7 +1305,7 @@ section[id] {
   color: #aaa399;
 }
 
-.footer__col h4 {
+.footer__col h3 {
   font-family: var(--font-body);
   font-size: .8rem;
   font-weight: 600;
