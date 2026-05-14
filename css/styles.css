@@ -402,8 +402,8 @@ p { margin: 0 0 1em; }
   z-index: 1;
 }
 
-.hero__content { order: 2; }
-.hero__media   { order: 1; }
+.hero__content { order: 1; }
+.hero__media   { order: 2; }
 
 .hero__eyebrow {
   display: flex;
